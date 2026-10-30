@@ -1,0 +1,846 @@
+
+/* GENERAL STYLE */
+@font-face {
+    font-family: "Handcaps";
+    src: url("fonts/Handcaps-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eee3d1;
+    color: #59483e;
+    font-family: "Handcaps", Georgia, serif;
+    line-height: 1.8;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* LOGIN PAGE */
+
+#login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 15px;
+}
+
+.scrapbook {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 25px;
+    background-color: #fffaf0;
+    border: 1px solid #d8c5a8;
+    box-shadow: 5px 7px 0 #d7c6b0;
+    text-align: center;
+}
+
+.archive-date {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #9b7567;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #9d5b60;
+    font-weight: normal;
+    font-size: clamp(32px, 7vw, 52px);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    max-width: 400px;
+    margin: 0 auto 25px;
+    font-size: 14px;
+}
+
+
+/* YOUR DRAWING */
+
+.polaroid {
+    display: block;
+    width: 190px;
+    margin: 25px auto;
+    padding: 10px 10px 15px;
+    background-color: white;
+    box-shadow: 2px 4px 8px #00000020;
+    transform: rotate(-4deg);
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    background-color: #ead7d0;
+}
+
+.polaroid p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+/* PASSWORD HINT */
+
+.password-hint {
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4e7df;
+    border-left: 3px solid #c78d8b;
+}
+
+.password-hint h3 {
+    color: #9d5b60;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.password-hint p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+
+/* LOGIN FORM */
+
+#login-form {
+    max-width: 350px;
+    margin: 25px auto 0;
+}
+
+#login-form label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+#password {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8b8ad;
+    background-color: #fffdf8;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: center;
+}
+
+#password:focus {
+    outline: 1px solid #a66f72;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    background-color: #a66f72;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #854d52;
+}
+
+#login-form button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+#error-message {
+    color: #b23b45;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.footer-note {
+    margin-top: 25px;
+    font-size: 12px;
+    font-style: italic;
+    color: #9b7567;
+}
+
+
+/* MAIN HEADER */
+
+.main-header {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #e6d4c1;
+    border-bottom: 1px solid #d4b8a0;
+}
+
+.main-header h2 {
+    color: #9d5b60;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.main-header p {
+    font-size: 13px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: #80565a;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #b66f76;
+    text-decoration: underline;
+}
+
+
+/* GENERAL PAGE SECTIONS */
+
+.page-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 85px 25px;
+    text-align: center;
+}
+
+.page-section > p {
+    margin-bottom: 15px;
+}
+
+.small-heading {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #9b7567;
+}
+
+.handwritten {
+    font-style: italic;
+    color: #9d5b60;
+    margin-top: 25px;
+}
+
+.welcome-picture {
+    width: 220px;
+    max-width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 3px 4px 8px #00000020;
+    transform: rotate(3deg);
+}
+
+.section-intro {
+    margin-bottom: 35px;
+}
+
+
+/* CHAPTER CARDS */
+
+.chapter {
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 30px 25px;
+    background-color: #fffaf0;
+    border: 1px solid #dfcbb4;
+    box-shadow: 3px 4px 0 #d7c6b0;
+    text-align: left;
+}
+
+.chapter-number {
+    color: #a66f72;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.chapter h2 {
+    color: #9d5b60;
+    font-size: 27px;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+.chapter-caption {
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.letter-button {
+    font-size: 13px;
+}
+
+
+/* LETTERS */
+
+.letter {
+    margin-top: 25px;
+    padding: 25px 20px;
+    background-color: #f5e9d9;
+    border: 1px dashed #c9a99a;
+    animation: appear 0.5s ease;
+}
+
+.letter h3 {
+    color: #9d5b60;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.letter p {
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.letter-ending {
+    color: #9d5b60;
+    font-style: italic;
+    text-align: right;
+    margin-top: 25px;
+}
+
+
+/* RELATIONSHIP COUNTER */
+
+.relationship-date {
+    color: #9d5b60;
+    font-style: italic;
+}
+
+#day-counter {
+    color: #9d5b60;
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+
+/* FOOTER */
+
+.site-footer {
+    padding: 30px 15px;
+    background-color: #e6d4c1;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* ANIMATION */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* MOBILE FRIENDLY */
+
+@media (max-width: 480px) {
+
+    .scrapbook {
+        padding: 35px 18px;
+    }
+
+    .page-section {
+        padding: 60px 18px;
+    }
+
+    .chapter {
+        padding: 25px 18px;
+    }
+
+    .letter {
+        padding: 20px 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+}
+#music-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+
+    background-color: #9d5b60;
+    color: #fffaf0;
+
+    border: 1px solid #fffaf0;
+    border-radius: 25px;
+
+    padding: 12px 18px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#music-button:hover {
+    background-color: #7d4247;
+    transform: translateY(-3px);
+}
+/* STAR JAR SECTION */
+.star-jar-section {
+    position: relative;
+    max-width: 750px;
+    margin: 70px auto;
+    padding: 55px 25px;
+    text-align: center;
+
+    background-color: #fffaf0;
+    color: #5d4140;
+
+    border: 2px dashed #d9b5a5;
+    border-radius: 12px;
+    box-shadow: 5px 6px 0 #e3cfc0;
+}
+
+.star-jar-section h2 {
+    color: #9d5b60;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.small-note {
+    color: #9d7770;
+    font-family: "Handcaps", Georgia, serif;
+    font-size: 22px;
+}
+
+.jar-description {
+    max-width: 450px;
+    margin: 0 auto 25px;
+    color: #6f5953;
+}
+
+/* THE CLICKABLE JAR */
+.jar-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0 auto;
+    padding: 15px;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.jar-button:hover {
+    transform: translateY(-6px) rotate(-3deg);
+}
+
+.jar-stars {
+    color: #c18b39;
+    font-size: 24px;
+    letter-spacing: 5px;
+    animation: twinkle 2s infinite alternate;
+}
+
+.jar-emoji {
+    display: block;
+    font-size: 105px;
+    filter: drop-shadow(3px 5px 2px #d9c7b7);
+}
+
+.jar-label {
+    color: #9d5b60;
+    font-family: "Handcaps", Georgia, serif;
+    font-size: 23px;
+}
+
+/* THE STAR AND ITS MESSAGE */
+.star-message {
+    max-width: 420px;
+    margin: 30px auto 0;
+    padding: 25px;
+
+    background-color: #f8e8e5;
+    border: 1px solid #d9b5a5;
+    border-radius: 8px;
+
+    animation: starPop 0.7s ease both;
+}
+
+.popped-star {
+    color: #c18b39;
+    font-size: 55px;
+    animation: starTwirl 0.8s ease both;
+}
+
+#message-text {
+    color: #65484a;
+    font-family: "Handcaps", Georgia, serif;
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.message-signature {
+    display: block;
+    color: #9d5b60;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.jar-footer {
+    color: #9d7770;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+/* ANIMATIONS */
+@keyframes starPop {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.6);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes starTwirl {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* SMALL SCREENS */
+@media (max-width: 600px) {
+    .star-jar-section {
+        margin: 40px 15px;
+        padding: 35px 18px;
+    }
+
+    .star-jar-section h2 {
+        font-size: 27px;
+    }
+
+    .jar-emoji {
+        font-size: 85px;
+    }
+}
+
+/* OUR TIME TOGETHER */
+.our-time-section {
+    padding: 70px 25px;
+    text-align: center;
+    color: #5d4140;
+}
+
+.our-time-section > h2 {
+    color: #9d5b60;
+    font-family: "Handcaps", Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+/* PUT THE TWO CARDS SIDE BY SIDE */
+.distance-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* POLAROID CARD */
+.distance-polaroid {
+    width: 330px;
+    flex-shrink: 0;
+
+    padding: 15px 15px 25px;
+
+    background-color: #fffaf0;
+    box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.15);
+
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+}
+
+.distance-polaroid:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+/* MAP BACKGROUND */
+.distance-map {
+    position: relative;
+    height: 290px;
+    overflow: hidden;
+
+    background-color: #f1e7d8;
+    border: 1px solid #e3d3c0;
+}
+
+/* DECORATIVE LAND SHAPES */
+.map-land {
+    fill: #d7c5ad;
+    opacity: 0.8;
+}
+
+/* SVG ROUTE */
+.route-map {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.route-line {
+    fill: none;
+    stroke: #b64c50;
+    stroke-width: 3;
+    stroke-dasharray: 5 6;
+    stroke-linecap: round;
+}
+
+.route-dot {
+    fill: #b64c50;
+}
+
+.route-ring {
+    fill: none;
+    stroke: #b64c50;
+    stroke-width: 1.5;
+    opacity: 0.6;
+}
+
+.route-heart {
+    fill: #b64c50;
+    font-size: 18px;
+}
+
+/* LOCATION LABELS */
+.map-location {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #75514c;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.map-location span {
+    color: #b64c50;
+    font-size: 18px;
+}
+
+.map-location strong {
+    letter-spacing: 1px;
+    font-size: 11px;
+}
+
+.map-location small {
+    font-size: 9px;
+}
+
+.baguio-label {
+    top: 10px;
+    left: 18px;
+}
+
+.perth-label {
+    right: 8px;
+    bottom: 8px;
+}
+
+/* LITTLE MAP DECORATIONS */
+.map-decoration {
+    position: absolute;
+    z-index: 2;
+
+    color: #b88d71;
+}
+
+.decoration-one {
+    top: 115px;
+    left: 35px;
+    font-size: 20px;
+}
+
+.decoration-two {
+    top: 70px;
+    right: 28px;
+    font-size: 23px;
+}
+
+/* POLAROID CAPTION */
+.polaroid-caption {
+    padding-top: 17px;
+}
+
+.distance-number {
+    margin: 0;
+
+    color: #9d5b60;
+    font-family: "Handcaps", Georgia, serif;
+    font-size: 34px;
+}
+
+.distance-caption {
+    margin-top: 5px;
+
+    color: #8c7166;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* DAY COUNTER CARD */
+.time-counter-card {
+    max-width: 370px;
+    padding: 35px 25px;
+
+    background-color: #f8e8e5;
+    border: 1px dashed #cda6a0;
+    border-radius: 8px;
+
+    box-shadow: 4px 5px 0 #e4cfc3;
+}
+
+.counter-heart {
+    color: #b64c50;
+    font-size: 40px;
+}
+
+.counter-label {
+    margin-top: 15px;
+
+    color: #8c7166;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#day-counter {
+    margin: 15px 0;
+
+    color: #9d5b60;
+    font-family: "Handcaps", Georgia, serif;
+    font-size: 35px;
+    line-height: 1.3;
+}
+
+.counter-message {
+    color: #6f5953;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.counter-decoration {
+    display: block;
+    margin-top: 20px;
+
+    color: #9d5b60;
+    font-family: "Handcaps", Georgia, serif;
+    font-size: 22px;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 700px) {
+    .distance-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .distance-polaroid {
+        width: min(330px, 100%);
+    }
+
+    .time-counter-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .our-time-section > h2 {
+        font-size: 35px;
+    }
+}
+
+/* KEEP THE WEBSITE HIDDEN UNTIL LOGIN */
+#login-page {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow-y: auto;
+    z-index: 9999;
+
+    background-color: #eee3d1;
+}
+
+/* HIDE THE WEBSITE BEFORE LOGIN */
+#home-page[hidden] {
+    display: none !important;
+}
+
+/* PREVENT SCROLLING WHILE LOGIN IS OPEN */
+body.login-active {
+    overflow: hidden;
+}
